@@ -1,7 +1,5 @@
 package formsTesting;
 
-import java.util.ArrayList;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -21,7 +19,7 @@ public class GroupTest {
         group.addForm(rectangle1); // 20
         group.addForm(square1); // 49
         double result = group.calculateArea();
-        Assert.assertEquals(result, (Math.pow(circle1.getRadius(), 2)*Math.PI) + (rectangle1.getLength() * rectangle1.getWidth()) + (square1.getRectangle().getLength() * square1.getRectangle().getWidth()));
+        Assert.assertEquals(result, (Math.pow(circle1.getRadius(), 2) * Math.PI) + (rectangle1.getLength() * rectangle1.getWidth()) + (square1.getRectangle().getLength() * square1.getRectangle().getWidth()));
     }
 
     @Test
@@ -31,7 +29,7 @@ public class GroupTest {
         group.addForm(rectangle2);
         group.addForm(square2);
         double result = group.calculateCircumference();
-        Assert.assertEquals(result, (2*circle2.getRadius()*Math.PI) + (rectangle2.getLength() * 2 + rectangle2.getWidth() * 2) + (square2.getRectangle().getLength() * 4));
+        Assert.assertEquals(result, (2 * circle2.getRadius() * Math.PI) + (rectangle2.getLength() * 2 + rectangle2.getWidth() * 2) + (square2.getRectangle().getLength() * 4));
     }
 
     @Test

@@ -2,42 +2,43 @@ package formsTesting;
 
 public abstract class Form {
 
-	private double x;
-	private double y;
+    private double x;
+    private double y;
 
-	public Form(double x, double y) {
-		this.x = x;
-		this.y = y;
-	}
+    public Form(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
 
-	public double getX() {
-		return x;
-	}
+    // Getter + Setter
+    public double getX() {
+        return x;
+    }
 
-	public void setX(double x) {
-		this.x = x;
-	}
+    public void setX(double x) {
+        this.x = x;
+    }
 
-	public double getY() {
-		return y;
-	}
+    public double getY() {
+        return y;
+    }
 
-	public void setY(double y) {
-		this.y = y;
-	}
+    public void setY(double y) {
+        this.y = y;
+    }
 
-	/**
-	 * Method calculates the area.
-	 *
-	 * @return the area
-	 */
-	public abstract double calculateArea();
+    //Methoten
 
-	/**
-	 * Method calculates the circumference.
-	 *
-	 * @return the circumference
-	 */
-	public abstract double calculateCircumference();
+    /**
+     * calculates the area of this form.
+     * @return area
+     */
+    public abstract double calculateArea();
+
+    /**
+     * calculates the circumference of this form.
+     * @return circumference
+     */
+    public abstract double calculateCircumference();
 
 }

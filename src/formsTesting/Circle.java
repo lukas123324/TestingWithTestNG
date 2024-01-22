@@ -2,39 +2,49 @@ package formsTesting;
 
 public class Circle extends Form {
 
-	private double radius;
+    private double radius;
 
-	public Circle(double x, double y, double radius) {
-		super(x, y);
+    public Circle(double x, double y, double radius) {
+        super(x, y);
 
-		// check radius!!!
-		if (radius <= 0) {
-			throw new IllegalArgumentException("Radius must be greater than zero.");
-		}
+        // check radius!!!
+        if (radius <= 0) {
+            throw new IllegalArgumentException("Radius must be greater than zero.");
+        }
 
-		this.radius = radius;
-	}
+        this.radius = radius;
+    }
 
-	// Getter + Setter
-	public double getRadius() {
-		return radius;
-	}
+    // Getter + Setter
 
-	public void setRadius(double radius) {
-		this.radius = radius;
-	}
+    public double getRadius() {
+        return radius;
+    }
 
-	// Methoden
-	public double calculateArea() {
-		return Math.pow(this.radius, 2)*Math.PI;
-	}
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
 
-	public double calculateCircumference() {
-		return 2*this.radius*Math.PI;
-	}
+    // Methoden
 
-	// toString
-	public String toString() {
-		return "Circle (" + this.getX() + "|" + this.getY() + ") with radius = " + this.getRadius();
-	}
+    /**
+     * calculates the area of this circle.
+     * @return area
+     */
+    public double calculateArea() {
+        return Math.pow(this.radius, 2) * Math.PI;
+    }
+
+    /**
+     * calculates the circumference of this circle.
+     * @return circumference
+     */
+    public double calculateCircumference() {
+        return 2 * this.radius * Math.PI;
+    }
+
+    // toString
+    public String toString() {
+        return "Circle (" + this.getX() + "|" + this.getY() + ") with radius = " + this.getRadius();
+    }
 }

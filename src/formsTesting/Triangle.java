@@ -44,16 +44,25 @@ public class Triangle extends Form {
     }
 
     // Methoden
+
+    /**
+     * calculates the area of this triangle.
+     * @return area
+     */
     public double calculateArea() {
-        double s = (this.sideA + this.sideB + this.sideC)/2; // half circumference
+        double s = (this.sideA + this.sideB + this.sideC) / 2; // half circumference
         return Math.sqrt(s * (s - this.sideA) * (s - this.sideB) * (s - this.sideC)); // = Heronsche Formel
     }
 
+    /**
+     * calculates the circumference of this triangle.
+     * @return circumference
+     */
     public double calculateCircumference() {
         return this.sideA + this.sideB + this.sideC;
     }
 
-        // toString
+    // toString
     public String toString() {
         return "Triangle (" + this.getX() + "|" + this.getY() + ") with sides: " +
                 "A=" + sideA + ", B=" + sideB + ", C=" + sideC;
