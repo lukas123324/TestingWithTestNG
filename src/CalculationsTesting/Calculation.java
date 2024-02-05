@@ -11,11 +11,17 @@ public class Calculation {
 	 * @return maximum number of array
 	 */
     public static int findMax(int arr[]){  
-        int max=0;  
-        for(int i=1;i<arr.length;i++){  
-            if(max<arr[i])  
-                max=arr[i];  
-        }  
+        if(arr.length == 0){
+            return 0;
+        }
+
+        int max = arr[0]; // Initialize maximum as first element
+
+        for(int i = 1; i < arr.length; i++){
+            if(max < arr[i]){
+                max = arr[i];
+            }
+        }
         return max;  
     }  
     
@@ -26,7 +32,7 @@ public class Calculation {
      * @return cube of given number
      */
     public static int cube(int n){  
-        return n*n*n;  
+        return n * n * n;
     }  
 
     /**
@@ -35,18 +41,18 @@ public class Calculation {
      * @param str - words to be reversed
      * @return reverse words
      */
-    public static String reverseWord(String str){  
-  
-        StringBuilder result=new StringBuilder();  
-        StringTokenizer tokenizer=new StringTokenizer(str," ");  
-  
+    public static String reverseWord(String str){
+        StringBuilder result = new StringBuilder();
+        StringTokenizer tokenizer = new StringTokenizer(str," ");
+
         while(tokenizer.hasMoreTokens()){  
-        StringBuilder sb=new StringBuilder();  
-        sb.append(tokenizer.nextToken());  
-        sb.reverse();  
-  
-        result.append(sb);  
-        result.append(" ");  
+            StringBuilder sb = new StringBuilder();
+            sb.append(tokenizer.nextToken());
+            sb.reverse();
+            result.append(sb);
+            if (tokenizer.hasMoreTokens()) {
+                result.append(" ");
+            }
         }  
         return result.toString();  
     }  
@@ -58,10 +64,6 @@ public class Calculation {
      * @return base to the power of exponent
      */
     public static int toThePowerOf(int base, int exponent) {
-    	int result = 0;
-    	for(int i = 0; i <= exponent; i++) {
-    		result *= base;
-    	}
-    	return result;
+        return (int) Math.pow(base, exponent);
     }
 }  
